@@ -1,0 +1,7 @@
+Django==1.5.1
+South==0.8.1
+argparse==1.2.1
+django-taggit==0.10a1
+django-tinymce==1.5.1
+gunicorn==0.17.4
+wsgiref==0.1.2

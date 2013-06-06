@@ -1,0 +1,5 @@
+venv
+*.pyc
+*.pyo
+enapet.db
+ENAPET/static_files/*

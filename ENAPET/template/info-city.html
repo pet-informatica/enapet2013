@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>XVIII ENAPET &mdash; Nome da Seção</title>
+    <meta name="description" content="">
+
+    <link rel="stylesheet" href="{{STATIC_URL}}css/bootstrap.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{STATIC_URL}}css/main.min.css">
+    <link rel="stylesheet" href="{{STATIC_URL}}css/custom-navs.min.css">
+    <link rel="stylesheet" href="{{STATIC_URL}}css/custom-breadcrumb.min.css">
+    <!--[if gte IE 9]>
+      <style type="text/css">
+        .cssgradients {
+          filter: none;
+        }
+      </style>
+    <![endif]-->
+
+    <script src="{{STATIC_URL}}js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+  </head>
+  <body>
+    <!--[if lt IE 9]>
+    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+    <header class="main-header">
+      <div class="container">
+        <nav class="navbar clearfix navbar-fixed-top">
+          <div class="container">
+            <ul>
+              <li><a href="{% url 'home.home' %}" title="Início">Início</a></li>
+              <li class="active"><a href="{% url 'information.home' %}" title="Informações">Informações</a></li>
+              <li><a href="{% url 'register.home' %}" title="Inscrições">Inscrições</a></li>
+              <li><a href="{% url 'schedule.home' %}" title="Programação">Programação</a></li>
+              <li><a href="{% url 'publications.home' %}" title="Trabalhos">Trabalhos</a></li>
+              <li><a href="{% url 'blog.home' %}" title="Notícias">Notícias</a></li>
+              <li><a href="{% url 'contact.home' %}" title="Contato">Contato</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <section class="event-call clearfix">
+        <div class="container">
+          <ul id="social-networks" class="inline">
+            <li>
+              <a href="https://twitter.com/share?url=http%3A%2F%2Fenapet2013.ufpe.br&text=Site+do+XVIII+ENAPET" title="Compartilhe no Twitter" target="_blank" class="replacement twitter" data-toggle="tooltip"  data-placement="bottom">Twitter</a>
+            </li>
+            <li>
+              <a href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fenapet2013.ufpe.br&t=Site+do+XVIII+ENAPET" title="Compartilhe no Facebook" target="_blank" class="replacement facebook" data-toggle="tooltip"  data-placement="bottom">Facebook</a>
+            </li>
+            <li>
+              <a href="http://plus.google.com/share?url=http%3A%2F%2Fenapet2013.ufpe.br" title="Compartilhe no Google+" target="_blank" class="replacement gplus" data-toggle="tooltip"  data-placement="bottom">G+</a>
+            </li>
+          </ul>
+          <div class="call-infos span8">
+            <h1 class="replacement">XVIII ENAPET</h1>
+            <div class="subscription clearfix">
+              <span class="address">Recife — Pernambuco</span>
+              <a href="{% url 'register.home' %}" title="Inscrições abertas" class="btn btn-success subscribe-button">Inscrições abertas</a>
+            </div>
+            <span class="nipple replacement">Data:</span><span class="date">1 a 6 Outubro de 2013</span>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <section class="content clearfix">
+      <header class="content-header">
+        <div class="container">
+          <div class="header-wrapper">
+            <ul class="breadcrumb">
+              <li><a href="{% url 'information.home' %}" title="migalhas">Informações</a> <span class="divider">/</span></li>
+              <li class="active" title="Informações">Cidade</li>
+            </ul>
+            <h1 class="small">
+              <span class="section-name">Recife</span>
+            </h1>
+          </div>
+          <iframe id="facebook-plugin" src="http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FEnapet2013Recife&amp;send=false&amp;layout=standard&amp;width=220&amp;show_faces=true&amp;font&amp;colorscheme=light&amp;action=like&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:220px; height:80px;" allowTransparency="true"></iframe>
+        </div>
+      </header>
+      <div class="content-body clearfix">
+        <section class="news container">
+          <ul class="nav nav-pills">
+            <li><a href="#cidade" title="Eventos">A cidade</a></li>
+            <li><a href="#transporte" title="Subcategoria 2">Transporte</a></li>
+            <li><a href="#hoteis" title="Subcategoria 3">Hotéis</a></li>
+          </ul>
+          <article>
+            <section id='cidade'>
+              <h1>A cidade</h1>
+              <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi no mé, cursus quis, vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa.</p>
+            </section>
+            <hr>
+            <section id='transporte'>
+              <h1>Transporte</h1>
+              <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi no mé, cursus quis, vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa.</p>
+            </section>
+            <hr>
+            <section id='hoteis'>
+              <h1>Hotéis</h1>
+              <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi no mé, cursus quis, vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa.</p>
+            </section>
+          </article>
+        </div>
+      </div> <!-- end of .content-body -->
+    </section>
+    <footer class="main-footer">
+      <div class="navigation">
+        <nav class="navbar clearfix">
+          <div class="container">
+            <ul>
+              <li><a href="{% url 'home.home' %}" title="Início">Início</a></li>
+              <li class="active"><a href="{% url 'information.home' %}" title="Informações">Informações</a></li>
+              <li><a href="{% url 'register.home' %}" title="Inscrições">Inscrições</a></li>
+              <li><a href="{% url 'schedule.home' %}" title="Programação">Programação</a></li>
+              <li><a href="{% url 'publications.home' %}" title="Trabalhos">Trabalhos</a></li>
+              <li><a href="{% url 'blog.home' %}" title="Notícias">Notícias</a></li>
+              <li><a href="{% url 'contact.home' %}" title="Contato">Contato</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="container">
+        <div class="row">
+          <section class="span4 footer-info">
+            <h1>Notícias</h1>
+            <ol class="news">
+              {% for article in footer_articles %}
+                <li>
+                  <a href="{% url 'blog_article_slug' article_slug=article.slug %}" title="{{article.title}}">
+                    {{article.title}}
+                  </a>
+                </li>
+              {% endfor %}
+            </ol>
+            <a href="{% url 'blog.home' %}" class="see-more"><small>ver mais</small></a>
+          </section>
+          <section class="span8 footer-info">
+            <h1>Apoiadores</h1>
+            <ul class="clearfix supporters">
+              <li><a href="#" title="Nome do apoiador"><img src="#" alt="Nome do apoiador"/></a></li>
+              <li><a href="#" title="Nome do apoiador"><img src="#" alt="Nome do apoiador"/></a></li>
+              <li><a href="#" title="Nome do apoiador"><img src="#" alt="Nome do apoiador"/></a></li>
+              <li class="last-support-image"><a href="#" title="Nome do apoiador"><img src="#" alt="Nome do apoiador"/></a></li>
+              <li><a href="#" title="Nome do apoiador"><img src="#" alt="Nome do apoiador"/></a></li>
+              <li><a href="#" title="Nome do apoiador"><img src="#" alt="Nome do apoiador"/></a></li>
+              <li><a href="#" title="Nome do apoiador"><img src="#" alt="Nome do apoiador"/></a></li>
+              <li class="last-support-image"><a href="#" title="Nome do apoiador"><img src="#" alt="Nome do apoiador"/></a></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{STATIC_URL}}js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+    <script src="{{STATIC_URL}}js/vendor/bootstrap.min.js"></script>
+    <script src="{{STATIC_URL}}js/vendor/jquery.backgrounder.min.js"></script>
+
+    <script src="{{STATIC_URL}}js/custom-navs.min.js"></script>
+    <script src="{{STATIC_URL}}js/main.min.js"></script>
+
+    <script>
+      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+  </body>
+</html>

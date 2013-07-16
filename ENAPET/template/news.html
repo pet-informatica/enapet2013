@@ -85,7 +85,9 @@
                 <li>
                   <article>
                     <img src="#" alt="Artigo destaque ou última notícia"/>
+					<header>
 					<span class="date">{{article.date_published|date:"d M"}}</span>
+					</header>
                     <a href="{% url 'blog_article_slug' article_slug=article.slug %}" title="{{article.title}}">{{article.title}}</a>
                     <p>{{article.headline}}</p>
                   </article>

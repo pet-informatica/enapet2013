@@ -65,7 +65,7 @@
       <header class="content-header">
         <div class="container">
           <h1>
-            <span class="section-name">Notícias</span><small>Tudo sobre o <span class="acronym">ENAPET</span></small>
+            <span class="section-name">Notícias</span>
           </h1>
           <iframe id="facebook-plugin" src="http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FEnapet2013Recife&amp;send=false&amp;layout=standard&amp;width=220&amp;show_faces=true&amp;font&amp;colorscheme=light&amp;action=like&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:220px; height:80px;" allowTransparency="true"></iframe>
        </div>
@@ -85,6 +85,7 @@
                 <li>
                   <article>
                     <img src="#" alt="Artigo destaque ou última notícia"/>
+					<span class="date">{{article.date_published|date:"d M"}}</span>
                     <a href="{% url 'blog_article_slug' article_slug=article.slug %}" title="{{article.title}}">{{article.title}}</a>
                     <p>{{article.headline}}</p>
                   </article>

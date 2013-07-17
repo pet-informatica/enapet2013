@@ -30,6 +30,7 @@ class HomeView(BaseView):
 		"""% dic
 
 		send_mail(subject, message , 'enapet@contato.ufpe.br', ['dnr2@cin.ufpe.br'], fail_silently=False)		
+		
 
 def envia_email(name, to_email, html_path, password='', subject='Contato ENAPET 2013'):
     if not '@' in to_email:

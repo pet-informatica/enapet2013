@@ -2,6 +2,8 @@ from django.shortcuts import render
 
 from home.views import BaseView
 from django.core.mail import mail_admins
+from django.core.mail import send_mail
+from django.core.mail import EmailMultiAlternatives
 
 class HomeView(BaseView):
 	def get_context_data(self, **kwargs):
@@ -27,4 +29,24 @@ class HomeView(BaseView):
 		%(message)s
 		"""% dic
 
-		mail_admins(subject, message)
+		send_mail(subject, message , 'enapet@contato.ufpe.br', ['dnr2@cin.ufpe.br'], fail_silently=False)
+
+def envia_email(name, to_email, html_path, password='', subject='Contato ENAPET 2013'):
+    if not '@' in to_email:
+            return
+    if '@facebook.com' in to_email:
+            return
+    context = {
+            'nome' : name,
+            'email' : to_email,
+            'senha' : password,
+    }
+
+    from_email = 'noreply@greaton.me'
+
+    text_content = ''
+    html_content = render_to_string(html_path, context)
+    msg = 	(subject,
+            text_content, from_email, [to_email])
+    msg.attach_alternative(html_content, "text/html")
+    msg.send()

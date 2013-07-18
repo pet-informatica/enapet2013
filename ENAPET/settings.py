@@ -8,9 +8,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    ("PET Informatica", "petcomputacao-l@cin.ufpe.br"),
-    ("Rafael Marinheiro", "rfm3@cin.ufpe.br"),
-    ("Ermano Arruda", "eaa3@cin.ufpe.br"),
+    ("E-mail ENAPET 2013", "enapet2013@gmail.com")
     # ('Your Name', 'your_email@example.com'),
 )
 
@@ -31,7 +29,7 @@ DATABASES = {
 #CONFIGURACAO PARA MANDAR EMAILS!
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = "enapet2013@gmail.com"
-EMAIL_HOST_PASSWORD = '' #COLOQUE AQUI A SENHA DE enapet2013@gmail.com!
+EMAIL_HOST_PASSWORD = '20enapet13' #COLOQUE AQUI A SENHA DE enapet2013@gmail.com!
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 SERVER_EMAIL = 'enapet2013@gmail.com'

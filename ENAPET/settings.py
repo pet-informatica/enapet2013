@@ -10,6 +10,7 @@ TEMPLATE_DEBUG = DEBUG
 ADMINS = (
     ("PET Informatica", "petcomputacao-l@cin.ufpe.br"),
     ("Rafael Marinheiro", "rfm3@cin.ufpe.br"),
+    ("Ermano Arruda", "eaa3@cin.ufpe.br"),
     # ('Your Name', 'your_email@example.com'),
 )
 
@@ -26,6 +27,15 @@ DATABASES = {
         'PORT': '',                      # Set to empty string for default.
     }
 }
+
+#CONFIGURACAO PARA MANDAR EMAILS!
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = "enapet2013@gmail.com"
+EMAIL_HOST_PASSWORD = '' #COLOQUE AQUI A SENHA DE enapet2013@gmail.com!
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+SERVER_EMAIL = 'enapet2013@gmail.com'
+DEFAULT_FROM_EMAIL = 'enapet2013@gmail.com'
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts

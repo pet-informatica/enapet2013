@@ -75,18 +75,18 @@
         <div class="hack"></div>
         <div class="container">
           <div class="row">
-            <form action="#" method="post" accept-charset="utf-8" class="contact-form span6">
+            <form action="submit/" method="post" accept-charset="utf-8" class="contact-form span6">
               {% csrf_token %}
               <fieldset>
                 <legend>Formulário online</legend>
                 <label for="your-name" class="visuallyhidden">Seu nome</label>
                 <input type="text" name="#" id="your-name" placeholder="Seu nome"/>
                 <label for="phone" class="visuallyhidden">Telefone <small>(opcional)</small></label>
-                <input type="text" name="#" id="phone" placeholder="Telefone (opcional)"/>
+                <input type="text" name="phone" id="phone" placeholder="Telefone (opcional)"/>
                 <label for="subject" class="visuallyhidden">Assunto</label>
-                <input type="text" name="#" id="subject" placeholder="Assunto"/>
+                <input type="text" name="subject" id="subject" placeholder="Assunto"/>
                 <label for="message" class="visuallyhidden">Mensagem</label>
-                <textarea name="#" id="message" placeholder="Mensagem..."></textarea>
+                <textarea name="message" id="message" placeholder="Mensagem..."></textarea>
                 <div class="buttons">
                   <button type="submit" class="btn btn-info">Enviar</button>
                   <button type="reset" class="btn">Limpar</button>
@@ -132,7 +132,7 @@
                     {{article.title}}
                   </a>
                 </li>
-              {% endfor %}
+              {% endfor %}              
             </ol>
             <a href="{% url 'blog.home' %}" class="see-more"><small>ver mais</small></a>
           </section>

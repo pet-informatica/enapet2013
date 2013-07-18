@@ -8,6 +8,6 @@ from views import *
 
 urlpatterns = patterns('',
 	url(r'^$', HomeView.as_view(), name='contact.home'),
-	url(r'^submit/$', submit, name='contact.submit'),
+	#url(r'^submit/$', submit, name='contact.submit'),
 
 )

@@ -26,6 +26,7 @@ def submit(request):
 
 		#send_mail(subject, message,"botmail.sem.atrito@gmail.com", ["botmail.sem.atrito@gmail.com"])
 		mail_admins(subject, message)
+		
 		return HttpResponseRedirect('/contact/')
 
 

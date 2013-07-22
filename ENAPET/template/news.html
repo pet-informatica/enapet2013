@@ -107,7 +107,7 @@
                     <h1>{{article.title}}</h1>
                     <h2>{{article.headline}}</h2>
                   </header>
-                  {{article.content |safe}}
+<!--                  {{article.content |safe}} --> 
                   <span class="see-more-wrapper"><a href="{% url 'blog_article_slug' article_slug=article.slug %}" title="Ler mais" class="see-more">Ler mais</a></span>
                 </article>
               </li>

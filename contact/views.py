@@ -7,8 +7,12 @@ from django.core.mail import send_mail
 from django.core.mail import EmailMultiAlternatives
 
 
+class SubmitView(BaseView):
+	def get_context_data(self, **kwargs):
+		context = super(SubmitView, self).get_context_data(**kwargs)
+		return context
 
-def submit(request):
+	def post(self, request):
 		dic = {}
 		dic["name"] = request.POST.get("your-name") or ""
 		dic["phone"] = request.POST.get("phone") or ""
@@ -24,7 +28,6 @@ def submit(request):
 		%(message)s
 		"""% dic
 
-		#send_mail(subject, message,"botmail.sem.atrito@gmail.com", ["botmail.sem.atrito@gmail.com"])
 		mail_admins(subject, message)
 		
 		return HttpResponseRedirect('/contact/')

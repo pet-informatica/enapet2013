@@ -6,9 +6,15 @@ from django.core.mail import mail_admins
 from django.core.mail import send_mail
 from django.core.mail import EmailMultiAlternatives
 
+from django.core.mail import EmailMessage
 
 
-def submit(request):
+class SubmitView(BaseView):
+	def get_context_data(self, **kwargs):
+		context = super(SubmitView, self).get_context_data(**kwargs)
+		return context
+
+	def post(self, request):
 		dic = {}
 		dic["name"] = request.POST.get("your-name") or ""
 		dic["phone"] = request.POST.get("phone") or ""
@@ -24,8 +30,8 @@ def submit(request):
 		%(message)s
 		"""% dic
 
-		#send_mail(subject, message,"botmail.sem.atrito@gmail.com", ["botmail.sem.atrito@gmail.com"])
-		mail_admins(subject, message)
+		email = EmailMessage(subject, message, to=["enapet2013@gmail.com"])
+		email.send()
 		
 		return HttpResponseRedirect('/contact/')
 
@@ -55,6 +61,7 @@ class HomeView(BaseView):
 		"""% dic
 
 		send_mail(subject, message , 'enapet@contato.ufpe.br', ['dnr2@cin.ufpe.br'], fail_silently=False)		
+		
 
 def envia_email(name, to_email, html_path, password='', subject='Contato ENAPET 2013'):
     if not '@' in to_email:

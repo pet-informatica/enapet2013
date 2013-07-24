@@ -4,13 +4,11 @@ import os
 
 ROOT_PATH = os.path.dirname(__file__)
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    ("PET Informatica", "petcomputacao-l@cin.ufpe.br"),
-    ("Rafael Marinheiro", "rfm3@cin.ufpe.br"),
-    ("Ermano Arruda", "eaa3@cin.ufpe.br"),
+    ("E-mail ENAPET 2013", "enapet2013@gmail.com")
     # ('Your Name', 'your_email@example.com'),
 )
 
@@ -30,8 +28,8 @@ DATABASES = {
 
 #CONFIGURACAO PARA MANDAR EMAILS!
 EMAIL_HOST = 'smtp.gmail.com'
-#EMAIL_HOST_USER = "enapet2013@gmail.com"
-#EMAIL_HOST_PASSWORD = '' #COLOQUE AQUI A SENHA DE enapet2013@gmail.com!
+EMAIL_HOST_USER = "enapet2013@gmail.com"
+EMAIL_HOST_PASSWORD = '' #COLOQUE AQUI A SENHA DE enapet2013@gmail.com!
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 SERVER_EMAIL = 'enapet2013@gmail.com'
@@ -39,7 +37,7 @@ DEFAULT_FROM_EMAIL = 'enapet2013@gmail.com'
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["enapet2013.ufpe.br", "enapet2013.herokuapp.com"]
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name

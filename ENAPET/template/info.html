@@ -69,21 +69,24 @@
     <section class="content clearfix">
       <header class="content-header">
         <div class="container">
-          <div class="header-wrapper">
-            <h1 class="small">
+<!--          <div class="header-wrapper">
+		  <ul class="breadcrumb">
+		  <li><a href="{% url 'information.home' %}" title="migalhas">Informações</a> <span class="divider">/</span></li>
+		  </ul>
+          </div> -->
+			<h1>
               <span class="section-name">ENAPET 2013</span>
             </h1>
-          </div>
           <iframe id="facebook-plugin" src="http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FEnapet2013Recife&amp;send=false&amp;layout=standard&amp;width=220&amp;show_faces=true&amp;font&amp;colorscheme=light&amp;action=like&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:220px; height:80px;" allowTransparency="true"></iframe>
         </div>
       </header>
       <div class="content-body clearfix">
         <section class="news container">
           <ul class="nav nav-pills">
-            <li><a href="{% url 'information.events' %}" title="Eventos">Eventos</a></li>
-            <li><a href="{% url 'information.city' %}" title="Subcategoria 2">Recife</a></li>
-            <li><a href="{% url 'information.infrastructure' %}" title="Subcategoria 3">Estrutura</a></li>
-            <li><a href="{% url 'information.meetings' %}" title="Subcategoria 4">Encontros</a></li>
+		    <li><a href="{% url 'information.city' %}" title="Recife">Recife</a></li>
+            <li><a href="{% url 'information.events' %}" title="Eventos">Evento</a></li>
+            <li><a href="{% url 'information.infrastructure' %}" title="Estrutura">Estrutura</a></li>
+            <li><a href="{% url 'information.meetings' %}" title="Encontros">Encontros</a></li>
           </ul>
           <article>
             <p align="justify">Para a efetivação dos propósitos que sustentam a filosofia de formação complementar do PET nas universidades brasileiras, algumas ações devem ser implementadas na área do planejamento em atividades coletivas, tanto em âmbito local, quanto regional e nacional. 
@@ -127,14 +130,12 @@
           <section class="span8 footer-info">
             <h1>Apoiadores</h1>
             <ul class="clearfix supporters">
-              <li><a href="#" title="Universidade Federal de Pernambuco"><img src="{{STATIC_URL}}img/ufpe.jpg" alt="UFPE"/></a></li>
-              <li><a href="#" title="Universidade Federal Rural de Pernambuco"><img src="{{STATIC_URL}}img/ufrpe.jpg" alt="UFRPE"/></a></li>
-              <li><a href="#" title="Prefeitura da Cidade do Recife"><img src="{{STATIC_URL}}img/pcr.jpg" alt="Prefeitura da Cidade do Recife"/></a></li>
-              <li class="last-support-image"><a href="#" title="Governo do Estado de Pernambuco"><img src="{{STATIC_URL}}img/pernambuco.jpg" alt="Governo do Estado de Pernambuco"/></a></li>
-              <li><a href="#" title="Ministério da Educação"><img src="{{STATIC_URL}}img/mec.jpg" alt="Ministério da Educação"/></a></li>
-              <li><a href="#" title="TAM"><img src="{{STATIC_URL}}img/tam.jpg" alt="TAM"/></a></li>
-			  <li><a href="#" title="PET Mecânica - Ilha Solteira - UNESP"><img src="{{STATIC_URL}}img/petunesp.jpg" alt="PET MEC"/></a></li>
-              <li class="last-support-image"><a href="#" title="CVC"><img src="{{STATIC_URL}}img/cvc.jpg" alt="CVC"/></a></li>
+              <li><a href="http://www.ufpe.br/" target="_blank" title="Universidade Federal de Pernambuco"><img src="{{STATIC_URL}}img/ufpe.jpg" alt="UFPE"/></a></li>
+              <li><a href="http://www.ufrpe.br/" target="_blank" title="Universidade Federal Rural de Pernambuco"><img src="{{STATIC_URL}}img/ufrpe.jpg" alt="UFRPE"/></a></li>
+              <li><a href="http://www.recife.pe.gov.br" title="Prefeitura da Cidade do Recife"><img src="{{STATIC_URL}}img/pcr.jpg" alt="Prefeitura da Cidade do Recife"/></a></li>
+              <li class="last-support-image"><a href="http://www.pe.gov.br" target="_blank" title="Governo do Estado de Pernambuco"><img src="{{STATIC_URL}}img/pernambuco.jpg" alt="Governo do Estado de Pernambuco"/></a></li>
+              <li><a href="http://www.mec.gov.br" target="_blank" title="Ministério da Educação"><img src="{{STATIC_URL}}img/mec.jpg" alt="Ministério da Educação"/></a></li>
+			  <li><a href="https://www.facebook.com/petilha.engenhariamecanica" title="PET Mecânica - Ilha Solteira - UNESP"><img src="{{STATIC_URL}}img/petunesp.jpg" alt="PET MEC"/></a></li>
             </ul>
           </section>
         </div>

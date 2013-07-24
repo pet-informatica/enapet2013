@@ -30,8 +30,8 @@ DATABASES = {
 
 #CONFIGURACAO PARA MANDAR EMAILS!
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = "enapet2013@gmail.com"
-EMAIL_HOST_PASSWORD = '' #COLOQUE AQUI A SENHA DE enapet2013@gmail.com!
+#EMAIL_HOST_USER = "enapet2013@gmail.com"
+#EMAIL_HOST_PASSWORD = '' #COLOQUE AQUI A SENHA DE enapet2013@gmail.com!
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 SERVER_EMAIL = 'enapet2013@gmail.com'

@@ -6,6 +6,8 @@ from django.core.mail import mail_admins
 from django.core.mail import send_mail
 from django.core.mail import EmailMultiAlternatives
 
+from django.core.mail import EmailMessage
+
 
 class SubmitView(BaseView):
 	def get_context_data(self, **kwargs):
@@ -28,7 +30,8 @@ class SubmitView(BaseView):
 		%(message)s
 		"""% dic
 
-		mail_admins(subject, message)
+		email = EmailMessage(subject, message, to=["enapet2013@gmail.com"])
+		email.send()
 		
 		return HttpResponseRedirect('/contact/')
 

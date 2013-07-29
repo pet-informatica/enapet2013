@@ -30,7 +30,7 @@ class SubmitView(BaseView):
 		%(message)s
 		"""% dic
 
-		email = EmailMessage(subject, message, to=["enapet2013@gmail.com"])
+		email = EmailMessage(subject, message, from_email=phone, to=["enapet2013@gmail.com"])
 		email.send()
 		
 		return HttpResponseRedirect('/contact/')

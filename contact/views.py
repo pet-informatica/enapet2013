@@ -22,7 +22,7 @@ class SubmitView(BaseView):
 		dic["message"] = request.POST.get("message") or ""
 
 		subject = "[CONTATO-ENAPET] %(name)s - %(subject)s" % dic
-		emailFrom = %(phone)s % dic
+		emailFrom = "%(phone)s" % dic
 		message = """ 
 		Nome: %(name)s
 		Assunto: %(subject)s

@@ -22,13 +22,21 @@
     <script>
     function validateForm()
       {
-      var x=document.forms["myForm"]["email"].value;
-      var atpos=x.indexOf("@");
-      var dotpos=x.lastIndexOf(".");
-      if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+        var x=document.forms["myForm"]["email"].value;
+        var atpos=x.indexOf("@");
+        var dotpos=x.lastIndexOf(".");
+        if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
         {
-        alert("Email não é válido!");
-        return false;
+          alert("Email não é válido!");
+          return false;
+        }
+        if( document.forms["myForm"]["your-name"].value == ""){
+          alert("Campo Seu Nome é obrigátório");
+          return false;
+        }
+        if( document.forms["myForm"]["message"].value == ""){
+          alert("Campo Mensagem é obrigátório");
+          return false;
         }
       }
     </script>

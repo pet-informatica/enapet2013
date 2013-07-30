@@ -20,10 +20,15 @@
 
     <script src="{{STATIC_URL}}js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     <script>
-      function validateFields(){
-        if( document.getElementById("email").innerHTML == ""){
-          alert("Email não preenchido");
-          return false;
+    function validateForm()
+      {
+      var x=document.forms["myForm"]["email"].value;
+      var atpos=x.indexOf("@");
+      var dotpos=x.lastIndexOf(".");
+      if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+        {
+        alert("Email não é válido!");
+        return false;
         }
       }
     </script>
@@ -83,7 +88,7 @@
         <div class="hack"></div>
         <div class="container">
           <div class="row">
-            <form id='myform' action="submit/" method="post" accept-charset="utf-8" class="contact-form span6" onsubmit="validateFields()" >
+            <form id='myform' action="submit/" method="post" accept-charset="utf-8" class="contact-form span6" onsubmit="return validateForm()" >
               {% csrf_token %}
               <fieldset>
                 <legend>Formulário online</legend>

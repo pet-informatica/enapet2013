@@ -81,8 +81,8 @@
                 <legend>Formulário online</legend>
                 <label for="your-name" class="visuallyhidden">Seu nome</label>
                 <input type="text" name="#" id="your-name" placeholder="Seu nome"/>
-                <label for="phone" class="visuallyhidden">Telefone <small>(opcional)</small></label>
-                <input type="text" name="phone" id="phone" placeholder="Telefone (opcional)"/>
+                <label for="phone" class="visuallyhidden">E-mail</label>
+                <input type="text" name="phone" id="phone" placeholder="E-mail"/>
                 <label for="subject" class="visuallyhidden">Assunto</label>
                 <input type="text" name="subject" id="subject" placeholder="Assunto"/>
                 <label for="message" class="visuallyhidden">Mensagem</label>
@@ -126,7 +126,13 @@
           <section class="span4 footer-info">
             <h1>Notícias</h1>
             <ol class="news">
-                         
+              {% for article in footer_articles %}
+                <li>
+                  <a href="{% url 'blog_article_slug' article_slug=article.slug %}" title="{{article.title}}">
+                    {{article.title}}
+                  </a>
+                </li>
+              {% endfor %}              
             </ol>
             <a href="{% url 'blog.home' %}" class="see-more"><small>ver mais</small></a>
           </section>
@@ -138,7 +144,7 @@
               <li><a href="http://www.recife.pe.gov.br" title="Prefeitura da Cidade do Recife"><img src="{{STATIC_URL}}img/pcr.jpg" alt="Prefeitura da Cidade do Recife"/></a></li>
               <li class="last-support-image"><a href="http://www.pe.gov.br" target="_blank" title="Governo do Estado de Pernambuco"><img src="{{STATIC_URL}}img/pernambuco.jpg" alt="Governo do Estado de Pernambuco"/></a></li>
               <li><a href="http://www.mec.gov.br" target="_blank" title="Ministério da Educação"><img src="{{STATIC_URL}}img/mec.jpg" alt="Ministério da Educação"/></a></li>
-			  <li><a href="https://www.facebook.com/petilha.engenhariamecanica" title="PET Mecânica - Ilha Solteira - UNESP"><img src="{{STATIC_URL}}img/petunesp.jpg" alt="PET MEC"/></a></li>
+        <li><a href="https://www.facebook.com/petilha.engenhariamecanica" title="PET Mecânica - Ilha Solteira - UNESP"><img src="{{STATIC_URL}}img/petunesp.jpg" alt="PET MEC"/></a></li>
             </ul>
           </section>
         </div>

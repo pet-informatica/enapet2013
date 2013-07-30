@@ -17,21 +17,21 @@ class SubmitView(BaseView):
 	def post(self, request):
 		dic = {}
 		dic["name"] = request.POST.get("your-name") or ""
-		dic["phone"] = request.POST.get("phone") or ""
+		dic["email"] = request.POST.get("email") or ""
 		dic["subject"] = request.POST.get("subject") or ""
 		dic["message"] = request.POST.get("message") or ""
 
-		subject = "[CONTATO-ENAPET] %(name)s - %(subject)s" % dic
-		emailFrom = 'phrd@cin.ufpe.br'
+		subject = "[CONTATO-ENAPET] %(name)s - %(subject)s" % dic		
+		fromMail = "dnr2@cin.ufpe.br"
 		message = """ 
 		Nome: %(name)s
 		Assunto: %(subject)s
-		E-mail: %(phone)s
+		E-mail: %(email)s
 
 		%(message)s
 		"""% dic
 
-		email = EmailMessage(subject, message, to=["enapet2013@gmail.com"])
+		email = EmailMessage(subject, message, to=["enapet2013@gmail.com"], from_email= fromMail)
 		email.send()
 		
 		return HttpResponseRedirect('/contact/')

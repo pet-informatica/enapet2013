@@ -126,13 +126,7 @@
           <section class="span4 footer-info">
             <h1>Notícias</h1>
             <ol class="news">
-              {% for article in footer_articles %}
-                <li>
-                  <a href="{% url 'blog_article_slug' article_slug=article.slug %}" title="{{article.title}}">
-                    {{article.title}}
-                  </a>
-                </li>
-              {% endfor %}              
+                         
             </ol>
             <a href="{% url 'blog.home' %}" class="see-more"><small>ver mais</small></a>
           </section>

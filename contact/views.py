@@ -22,7 +22,7 @@ class SubmitView(BaseView):
 		dic["message"] = request.POST.get("message") or ""
 
 		subject = "[CONTATO-ENAPET] %(name)s - %(subject)s" % dic		
-		fromMail = "dnr2@cin.ufpe.br"
+		#fromMail = "dnr2@cin.ufpe.br"
 		message = """ 
 		Nome: %(name)s
 		Assunto: %(subject)s
@@ -31,7 +31,7 @@ class SubmitView(BaseView):
 		%(message)s
 		"""% dic
 
-		email = EmailMessage(subject, message, to=["enapet2013@gmail.com"], from_email= fromMail)
+		email = EmailMessage(subject, message, to=["enapet2013@gmail.com"])
 		email.send()
 		
 		return HttpResponseRedirect('/contact/')

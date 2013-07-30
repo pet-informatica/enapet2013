@@ -88,7 +88,7 @@
         <div class="hack"></div>
         <div class="container">
           <div class="row">
-            <form id='myform' action="submit/" method="post" accept-charset="utf-8" class="contact-form span6" onsubmit="return validateForm()" >
+            <form name="myForm" id='myform' action="submit/" method="post" accept-charset="utf-8" class="contact-form span6" onsubmit="return validateForm()" >
               {% csrf_token %}
               <fieldset>
                 <legend>Formulário online</legend>

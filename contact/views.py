@@ -17,7 +17,7 @@ class SubmitView(BaseView):
 	def post(self, request):
 		dic = {}
 		dic["name"] = request.POST.get("your-name") or ""
-		dic["phone"] = request.POST.get("phone") or ""
+		dic["email"] = request.POST.get("email") or ""
 		dic["subject"] = request.POST.get("subject") or ""
 		dic["message"] = request.POST.get("message") or ""
 
@@ -26,7 +26,7 @@ class SubmitView(BaseView):
 		message = """ 
 		Nome: %(name)s
 		Assunto: %(subject)s
-		E-mail: %(phone)s
+		E-mail: %(email)s
 
 		%(message)s
 		"""% dic

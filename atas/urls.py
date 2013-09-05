@@ -4,9 +4,8 @@ from django.conf.urls import patterns, include, url
 # from django.contrib import admin
 # admin.autodiscover()
 
-from views import *
+from atas.views import *
 
 urlpatterns = patterns('',
-	url(r'^$', HomeView.as_view(), name='contact.home'),
-	url(r'^submit/$', SubmitView.as_view(), name='contact.submit'),
+	url(r'^$', HomeView.as_view(), name='information.home'),
 )

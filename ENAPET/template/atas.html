@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
   <head>
-
-    <!--Facebook stuff-->
+<!--Facebook stuff-->
     <meta property="og:image" content="http://enapet2013.ufpe.br/static/img/logotipo.png"/>
     <meta property="og:title" content="ENAPET 2013" /> 
     <meta property="og:url" content="http://enapet2013.ufpe.br"/>
@@ -49,7 +48,7 @@
           <div class="container">
             <ul>
               <li><a href="{% url 'home.home' %}" title="Início">Início</a></li>
-              <li class="active"><a href="{% url 'information.home' %}" title="Informações">Informações</a></li>
+              <li><a href="{% url 'information.home' %}" title="Informações">Informações</a></li>
               <li><a href="{% url 'register.home' %}" title="Inscrições">Inscrições</a></li>
               <li><a href="{% url 'schedule.home' %}" title="Programação">Programação</a></li>
               <li><a href="{% url 'publications.home' %}" title="Trabalhos">Trabalhos</a></li>
@@ -88,29 +87,24 @@
     <section class="content clearfix">
       <header class="content-header">
         <div class="container">
-<!--          <div class="header-wrapper">
-		  <ul class="breadcrumb">
-		  <li><a href="{% url 'information.home' %}" title="migalhas">Informações</a> <span class="divider">/</span></li>
-		  </ul>
-          </div> -->
-			<h1>
-              <span class="section-name">ENAPET 2013</span>
+          <div class="header-wrapper">
+            
+            <h1>
+              <span class="section-name">Atas Regionais</span>
             </h1>
+          </div>
           <iframe id="facebook-plugin" src="http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FEnapet2013Recife&amp;send=false&amp;layout=standard&amp;width=220&amp;show_faces=true&amp;font&amp;colorscheme=light&amp;action=like&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:220px; height:80px;" allowTransparency="true"></iframe>
         </div>
       </header>
-      <div class="content-body clearfix">
+       <div class="content-body clearfix">
         <section class="news container">
-          <ul class="nav nav-pills">
-		    <li><a href="{% url 'information.city' %}" title="Recife">Recife</a></li>
-            <li><a href="{% url 'information.events' %}" title="Eventos">Evento</a></li>
-            <li><a href="{% url 'information.infrastructure' %}" title="Estrutura">Estrutura</a></li>
-            <li><a href="{% url 'information.meetings' %}" title="Encontros">Encontros</a></li>
-          </ul>
           <article>
-            <p align="justify">Para a efetivação dos propósitos que sustentam a filosofia de formação complementar do PET nas universidades brasileiras, algumas ações devem ser implementadas na área do planejamento em atividades coletivas, tanto em âmbito local, quanto regional e nacional. 
-			   Desse modo, atividades que viabilizem a comunicação entre os grupos existentes são de fundamental importância para o fortalecimento do Programa, como as trocas de experiências e o compartilhamento de informações no campo dos estudos e pesquisas desenvolvidos. 
-			   Nesse sentido, os Encontros Nacionais constitui a mola propulsora no processo de consolidação dos objetivos do PET.</p>
+            <h1>Seguem abaixo os links com as atas dos encontros regionais PET 2013</h1>
+            <p> Após a consolidação de todas as atas por parte da Cenapet, todos terão acesso ao material ao qual será base de discussões no Enapet. </p>
+      <h1>
+      <a href="{{STATIC_URL}}files/ataeconpet.pdf" title="Tutorial">Ata da assembléia geral do EconPET </a><br/>
+      <a href="{{STATIC_URL}}files/atasudeste.pdf" title="Tutorial">Ata da assembléia geral do SudestePET</a>
+      </h1>
           </article>
         </div>
       </div> <!-- end of .content-body -->
@@ -121,7 +115,7 @@
           <div class="container">
             <ul>
               <li><a href="{% url 'home.home' %}" title="Início">Início</a></li>
-              <li class="active"><a href="{% url 'information.home' %}" title="Informações">Informações</a></li>
+              <li><a href="{% url 'information.home' %}" title="Informações">Informações</a></li>
               <li><a href="{% url 'register.home' %}" title="Inscrições">Inscrições</a></li>
               <li><a href="{% url 'schedule.home' %}" title="Programação">Programação</a></li>
               <li><a href="{% url 'publications.home' %}" title="Trabalhos">Trabalhos</a></li>
@@ -136,6 +130,7 @@
           <section class="span4 footer-info">
             <h1>Notícias</h1>
             <ol class="news">
+              {% comment %}
               {% for article in footer_articles %}
                 <li>
                   <a href="{% url 'blog_article_slug' article_slug=article.slug %}" title="{{article.title}}">
@@ -143,6 +138,7 @@
                   </a>
                 </li>
               {% endfor %}
+              {% endcomment %}
             </ol>
             <a href="{% url 'blog.home' %}" class="see-more"><small>ver mais</small></a>
           </section>

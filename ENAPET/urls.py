@@ -15,6 +15,7 @@ urlpatterns = patterns('',
     url(r'^information/', include('information.urls')),
     url(r'^register/', include('register.urls')),
     url(r'^publications/', include('publications.urls')),
+    url(r'^atas/', include('atas.urls')),
     url(r'^tinymce/', include('tinymce.urls')),
 )
 

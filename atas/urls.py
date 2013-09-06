@@ -7,5 +7,5 @@ from django.conf.urls import patterns, include, url
 from atas.views import *
 
 urlpatterns = patterns('',
-	url(r'^$', HomeView.as_view(), name='information.home'),
+	url(r'^$', HomeView.as_view(), name='/atas'),
 )
